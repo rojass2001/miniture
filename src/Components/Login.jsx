@@ -6,8 +6,8 @@ function Login() {
   const dispatch=useDispatch()
   return (
     <>
-    <div className='w-full h-screen place-content-center place-items-center'>
-  <form className='w-[22%]  h-[280px] justify-center  px-3 bg-white  border-2
+    <div className='w-full min-h-screen place-content-center place-items-center'>
+  <form className='w-[22%]  min-h-[280px] justify-center  px-3 bg-white  border-2
   rounded-3xl border-gray-500 place-content-center  text-center sm:w-[80%] md:w-[35%]  '>
     <input className='input ' placeholder='Your email' type="email"/>
     <input className='input' placeholder="your password" required type="password"/>

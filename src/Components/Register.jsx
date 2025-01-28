@@ -6,8 +6,8 @@ function Register() {
     const dispatch=useDispatch()
   return (
     <>
-    <div className='w-full h-screen place-content-center place-items-center'>
-  <form className='w-[22%]  h-[280px] py-4 justify-center place-content-center px-3 bg-white  border-2
+    <div className='w-full min-h-screen place-content-center place-items-center'>
+  <form className='w-[22%]  min-h-[280px] py-4 justify-center place-content-center px-3 bg-white  border-2
   rounded-3xl border-gray-500  text-center sm:w-[80%] md:w-[35%] '>
     <input className='input ' placeholder='Your email' required type="email"/>
     <input className='input' placeholder="your password" required type="password"/>
