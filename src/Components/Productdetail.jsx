@@ -8,7 +8,7 @@ function Productdetail() {
  const dispatch=useDispatch()
   return (
 <>
-    <div className='w-full min-h-screen place-content-center absolute top-1 justify-center  place-items-center sm:px-1'>
+    <div className='w-full min-h-screen overflow-y-auto place-content-center absolute top-1 justify-center  place-items-center sm:px-1'>
       <div className=' w-[50%] min-h-[300px]   p-2 relative flex gap-3 mx-auto bg-white shadow-md shadow-gray-400 sm:flex-col sm:w-full  md:h-[380px] md:w-[70%]  '>
         <p onClick={()=>dispatch(productpopup())} className=' text-2xl font-bold absolute top-1
          right-3 sm:top-0 cursor-pointer bg-white'>x</p>
