@@ -1,0 +1,18 @@
+.carttotal{
+ display: flex;  
+ justify-content: space-between; 
+ font-weight: bold;
+ color: black;
+}
+.buttoncontain{
+    display: flex;  
+    font-weight: bold;
+    color: white;
+    column-gap: 8px;
+    justify-content: center;
+}
+.buttons{
+width: 120px;
+height: 32px;
+color: white;
+}
