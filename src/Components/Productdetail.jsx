@@ -26,7 +26,7 @@ function Productdetail() {
                 <button onClick={()=>dispatch(increase())} className='w-16 border-[1px] h-9 border-gray-300 ml-2'>+</button>
               </div>
               <div className='flex gap-2 mt-4 sm:gap-4 text-center place-items-center justify-center'>
-                <button onClick={()=>dispatch(addtocart(productdetails))} className='w-[120px] h-10 bg-orange-400 '>Addtocart</button>
+                <button onClick={()=>dispatch(addtocart(productdetails))} className='w-[120px] h-10 bg-red-400 '>Addtocart</button>
                 <button className='w-[120px] h-10 bg-orange-400 '>PayNow${productdetails.price*productdetails.quantity}</button>
               </div>
             </div>
