@@ -16,7 +16,7 @@ function Productdetail() {
         <div className='h-[300px] w-[50%] sm:w-full'>
           <img className='h-full w-full ' src={productdetails?.image}/>
         </div>
-           <div className='w-[60%] overflow-y-auto sm:w-full sm:text-center sm:place-items-center font-bold text-black pt-3'>
+           <div className='w-[60%] sm:w-full sm:text-center sm:place-items-center font-bold text-black pt-3'>
               <h5 className='font-bold'>{productdetails.name}</h5>
               <p >{productdetails?.des}</p>
               <p className=' text-xl '>${productdetails?.price}</p>
