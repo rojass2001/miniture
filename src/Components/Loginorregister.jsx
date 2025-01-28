@@ -7,7 +7,7 @@ function Loginorregister() {
     const {login}=useSelector(state=>state.popup)
   return (
     <>
-    <div className='w-full  fixed z-10 top-2 h-screen place-content-center place-items-center'>
+    <div className='w-full  fixed z-20  top-0 min-h-screen place-content-center place-items-center'>
     {login?
     <Login/>:<Register/>
     }
