@@ -15,7 +15,7 @@ function Productdetail() {
         <div className='h-[300px] w-[50%] sm:w-full'>
           <img className='h-full w-full ' src={productdetails?.image}/>
         </div>
-           <div className='w-[60%] sm:w-full sm:text-center sm:place-items-center font-bold text-black pt-3'>
+           <div className='w-[60%] overflow-y-auto sm:w-full sm:text-center sm:place-items-center font-bold text-black pt-3'>
               <h5 className='font-bold'>{productdetails.name}</h5>
               <p >{productdetails?.des}</p>
               <p className=' text-xl '>${productdetails?.price}</p>
@@ -25,7 +25,7 @@ function Productdetail() {
                 {productdetails.quantity}
                 <button onClick={()=>dispatch(increase())} className='w-16 border-[1px] h-9 border-gray-300 ml-2'>+</button>
               </div>
-              <div className='flex gap-2 mt-4 sm:gap-4 '>
+              <div className='flex gap-2 mt-4 sm:gap-4 text-center place-items-center justify-center'>
                 <button onClick={()=>dispatch(addtocart(productdetails))} className='w-[120px] h-10 bg-orange-400 '>Addtocart</button>
                 <button className='w-[120px] h-10 bg-orange-400 '>PayNow${productdetails.price*productdetails.quantity}</button>
               </div>
