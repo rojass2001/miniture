@@ -7,7 +7,7 @@ function Productdetail() {
  const dispatch=useDispatch()
   return (
 <>
-    <div className='w-full min-h-screen  place-content-center  justify-center  place-items-center sm:px-1'>
+    <div className='w-full min-h-screen mt-5 place-content-center  justify-center  place-items-center sm:px-1'>
      <div className=' w-[50%] min-h-[300px] py-2  relative flex gap-3
        mx-auto shadow-md bg-white shadow-gray-400 sm:flex-col sm:w-full 
         md:min-h-[380px] md:w-[70%]'>
