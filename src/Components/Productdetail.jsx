@@ -2,18 +2,16 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../redux/Cartslice'
 import {increase,decrease } from '../redux/Productslice'
-import { productpopup} from '../redux/Popup'
 function Productdetail() {
   const {productdetails}=useSelector(state=>state.product)
  const dispatch=useDispatch()
   return (
 <>
-    <div className='w-full min-h-screen overflow-y-auto place-content-center absolute top-1 justify-center  place-items-center sm:px-1'>
-      <div className=' w-[50%] min-h-[300px] overflow-y-auto   relative flex gap-3
-       mx-auto shadow-md bg-white shadow-gray-400 sm:flex-col sm:w-full  md:h-[380px] md:w-[70%]  '>
-        <p onClick={()=>dispatch(productpopup())} className=' text-2xl font-bold absolute top-1
-         right-3 sm:top-0 cursor-pointer bg-white'>x</p>
-        <div className='h-[300px]  w-[50%] sm:h-[150px] sm:w-full'>
+    <div className='w-full min-h-screen  place-content-center  justify-center  place-items-center sm:px-1'>
+     <div className=' w-[50%] min-h-[300px] py-2  relative flex gap-3
+       mx-auto shadow-md bg-white shadow-gray-400 sm:flex-col sm:w-full 
+        md:min-h-[380px] md:w-[70%]'>
+        <div className='h-[300px]  w-[50%]  sm:w-full'>
           <img className='h-full w-full ' src={productdetails?.image}/>
         </div>
            <div className='w-[60%] sm:w-full sm:text-center sm:place-items-center font-bold text-black pt-3'>
@@ -32,6 +30,7 @@ function Productdetail() {
               </div>
             </div>
        </div>
+        
     </div>
 </>
   )

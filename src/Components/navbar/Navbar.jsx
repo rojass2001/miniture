@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
-import Productdetail from '../Productdetail';
 import Mobilenav from './Mobilenav';
 import Desktopnav from './Desktopnav';
 import Navbaricons from './Navbaricons';
-import Loginorregister from '../Loginorregister';
 import { motion } from 'framer-motion';
 function Navbar() {
-  const{detail}=useSelector(state=>state.popup)
-  const{logincontain}=useSelector(state=>state.popup)
   const[open,setopen]=useState(false)
   const openandclose=()=>{
     setopen(!open)
@@ -27,14 +23,9 @@ function Navbar() {
       <Mobilenav openandclose={openandclose}/>
     }
      <Navbaricons openandclose={openandclose}/>
-      {detail&&
-        <Productdetail/>
-      }
+     
      
   </motion.div>
-  {logincontain&&
-   <Loginorregister/>
-  }
   
 </>
   )
