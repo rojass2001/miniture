@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdOutlineChair } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
@@ -13,7 +14,9 @@ function Hero() {
     <p className='text-4xl text-black font-bold '>With Our Furniture</p>
    <div className='flex gap-3 font-bold'>
      <p className='text-4xl text-black  '>Creation</p>
-    <div className=' bg-orange-400 text-white text-center place-content-center w-[150px] h-10'>Shop Now</div>
+     <Link className='no-underline' to="/shop">
+    <div className=' bg-orange-400 flex items-center text-white text-center place-content-center w-[150px] h-10'>Shop Now</div>
+    </Link>
    </div>
     
     </div>

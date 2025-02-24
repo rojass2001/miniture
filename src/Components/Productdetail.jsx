@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../redux/Cartslice'
 import {increase,decrease } from '../redux/Productslice'
@@ -19,12 +19,12 @@ function Productdetail() {
               <p >{productdetails?.des}</p>
               <p className=' text-xl '>${productdetails?.price}</p>
               <p className='text-green-400 text-sm'>{productdetails.stocks}</p>
-              <div className='flex w-full justify-center place-items-center items-center '>
+              <div className=" w-full flex  sm:justify-center ">
                 <button onClick={()=>dispatch(decrease())} className='w-16 border-[1px] h-9 border-gray-300 mr-2'>-</button>
-                {productdetails.quantity}
+               <span className='text-xl mt-1'> {productdetails.quantity}</span>
                 <button onClick={()=>dispatch(increase())} className='w-16 border-[1px] h-9 border-gray-300 ml-2'>+</button>
               </div>
-              <div className='flex gap-2 mt-4 sm:gap-4 text-center place-items-center justify-center'>
+              <div className='flex gap-2 mt-4 sm:gap-4 text-center place-items-start sm:place-items-center sm:justify-center '>
                 <button onClick={()=>dispatch(addtocart(productdetails))} className='w-[120px] h-10 bg-orange-400 '>Addtocart</button>
                 <button className='w-[120px] h-10 bg-orange-400 '>PayNow${productdetails.price*productdetails.quantity}</button>
               </div>

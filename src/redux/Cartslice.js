@@ -29,7 +29,8 @@ const INITIAL_STATE={
          
     })
    alert(newitem.name+ " added successfully to cart")  
-   state.totalprice+=newitem.subtotal?newitem.subtotal:newitem.price;  
+   state.totalprice+=newitem.subtotal?newitem.subtotal:newitem.price; 
+  
 }
 
   },

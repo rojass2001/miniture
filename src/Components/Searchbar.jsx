@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { IoSearch } from 'react-icons/io5'
+
+import { useState } from 'react';
 import { searchproducts } from '../redux/Productslice'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+
 import Mobilenav from './Mobilenav';
 import Desktopnav from './Desktopnav';
 import Navbaricons from './Navbaricons';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 function Navbar() {
   const[open,setopen]=useState(false)
   const openandclose=()=>{
@@ -14,7 +14,7 @@ function Navbar() {
   <motion.div
    initial={{opacity:0,y:-100}}
    animate={{opacity:1,y:0}}
-   transition={{duration:0.4,delay:0.5}}
+   transition={{duration:0.4,delay:0.6}}
    className="w-full fixed bg-white z-50 top-0 right-0 left-0 shadow-md
     shadow-gray-500  h-[60px] flex items-center justify-around">
     <p className='text-3xl font-black  mt-1  '>Miniture</p>

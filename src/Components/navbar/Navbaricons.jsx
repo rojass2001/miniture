@@ -10,7 +10,7 @@ function Navbaricons({openandclose}) {
   return (
     <>
        <div className='flex  text-2xl items-center mb-1 gap-3 sm:gap-0 '>
-       <HiOutlineHeart className='text-black'/>
+     <Link to="/progress">  <HiOutlineHeart className='text-black'/></Link>
        <Link to="/login"> <HiOutlineUser className='text-black'  size={24}/></Link>
    
           <div className='relative '>

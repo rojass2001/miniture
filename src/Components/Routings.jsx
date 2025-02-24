@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Home from '../Pages/Home'
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
 import Navbar from "./navbar/Navbar"
@@ -9,8 +9,8 @@ import Filterpage from '../Pages/Filterpage'
 import Cartpage from '../Pages/Cartpage'
 import Aboutpage from './Aboutpage'
 import Productdetail from './Productdetail'
-import Login from './Loginorregister/Login'
-import Register from './Loginorregister/Register'
+import Login from  "../Pages/Loginorregister/Login"
+import Register from "../pages/Loginorregister/Register"
 
 function Routings() {
   return (
@@ -28,8 +28,6 @@ function Routings() {
     <Route path='/productdetail' element={<Productdetail/>}/> 
     <Route path='/login' element={<Login/>}/>
     <Route path='/register' element={<Register/>}/>
-    
-    
     </Routes> 
     <Footer/>
     </Router>  

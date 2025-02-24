@@ -4,7 +4,6 @@ import './App.css'
 import Routings from './Components/Routings';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

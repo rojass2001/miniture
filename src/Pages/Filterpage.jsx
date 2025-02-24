@@ -6,7 +6,7 @@ function Filterpage() {
     <>
    
    
-    <div className='w-full flex gap-1 mt-[80px]'>
+    <div className='w-full flex mt-[80px]'>
     <Filter/>
     <Filterdatas/>   
     </div>

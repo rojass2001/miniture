@@ -1,6 +1,6 @@
 import React from 'react'
 import Sliders from './Sliders'
-import Hero from '../Hero'
+import Hero from './Hero'
 
 function Banner() {
   return (
