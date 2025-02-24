@@ -6,7 +6,7 @@ function Cartempty() {
   return (
     <>
      
-      <div className='w-full h-[250px] text-5xl place-content-center place-items-center md:h-screen'>
+      <div className='w-full text-center pt-10 justify-center text-5xl   h-screen'>
         <h1 className='font-bold text-black'>Your cart Is Empty</h1>
       </div>
     </>
