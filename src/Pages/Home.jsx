@@ -10,7 +10,7 @@ import Service from '../Components/home/Service/Service'
 function Home() {
   return (
     <>
-    <div className='w-full h-screen overflow-y-auto mt-[80px] px-12 sm:px-1 md:px-5 '>
+    <div className='w-full mt-[80px] px-12 sm:px-1 md:px-5 '>
      
      <Banner/>
     <Categories/>

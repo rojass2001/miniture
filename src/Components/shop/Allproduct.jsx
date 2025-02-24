@@ -21,7 +21,7 @@ function Allproduct() {
 <>
     <div className='w-full'>
     <Searchbar/>
-    <div className='w-full h-screen overflow-y-auto   mt-12 px-12 mb-4 grid grid-cols-4 gap-5 sm:grid-cols-1 md:grid-cols-3 md:px-3 sm:px-0  ' >
+    <div className='w-full h-screen overflow-y-auto   mt-12 px-12 mb-4 grid grid-cols-4 gap-5 sm:grid-cols-1 md:grid-cols-3 md:px-3 sm:px-1  ' >
       {
         allproduct?.map((a)=>(
       <Link className='no-underline' to="/productdetail" key={a.id} >  

@@ -15,7 +15,7 @@ function Filterdatas() {
       <Searchbar/>
       {filterproducts.length<1?
       <div className='w-full h-screen text-5xl place-content-start text-center'>No Search Found</div>
-:<div className='w-full sm:h-screen overflow-y-auto  mt-12 px-12 mb-4 grid gap-5  grid-cols-4  sm:grid-cols-1 md:grid-cols-3 md:px-3 sm:px-0 '>
+:<div className='w-full sm:h-screen overflow-y-auto  mt-12 px-12 mb-4 grid gap-5  grid-cols-4  sm:grid-cols-1 md:grid-cols-3 md:px-3 sm:px-1 '>
              {
              filterproducts?.map((a)=>(
            <Link className='no-underline' to="/productdetail" key={a.id}><div className={`h-[250px] group rounded-3xl 
