@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 function Loginorregister({des,buttonname,link}) {
     return (
       <div className=' w-full min-h-screen pb-5 px-2 pt-[120px] place-content-center place-items-center '>
-      <form className='sm:w-full md:w-[50%] lg:w-[23%]  space-y-3 border-[5px] border-black
-      place-content-center rounded-lg text-black min-h-[330px]   p-3'>
+      <form className='w-full md:w-[50%] lg:w-[24%]  space-y-2 md:space-y-4 sm:space-y-4 border-[5px] border-black
+      place-content-center rounded-lg text-black min-h-[300px] sm:min-h-[380px]   px-3 py-3 sm:py-12 md:py-12'>
       <label className='font-bold '>Enter Email</label>
      <div className="w-full flex  items-center h-14 pr-1 place-content-center border-2 border-black">
       <IoIosContact className="mt-1 text-black"size={29}/>
