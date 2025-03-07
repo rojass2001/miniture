@@ -17,7 +17,7 @@ function Navbaricons({openandclose}) {
             <Link to="/cart"><MdOutlineShoppingBag className='text-black' size={24} /></Link>
             {cartproducts.length>0&&
               <div className="absolute  text-white right-[-8px] top-[-8px] text-sm place-content-center text-center bg-orange-500 
-              w-5 h-5 rounded-full sm:right-[-1px] sm:w-4 sm:h-4">{cartproducts.length}</div> 
+              w-5 h-5 rounded-full sm:right-[-1px] sm:w-4 sm:h-4 animate-bounce">{cartproducts.length}</div> 
             }   
           </div>
         <FaBars onClick={()=>openandclose()} className='hidden  sm:block' size={35}/> 
