@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react'
-
 import Filter from '../Filter'
 import Allproduct from './Allproduct'
 

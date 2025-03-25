@@ -6,19 +6,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../../redux/Cartslice'
 import { productdetailcontain, } from '../../redux/Productslice'
 import { Link } from 'react-router-dom'
+import Card from '../Card'
  const hover="transform transition-all duration-300 hover:scale-105"
-function Topselling() {
-  const dispatch=useDispatch()
-  
-         
-      
-  return (
-<>
- <div className='w-full mt-[50px]'>
-  <h1 className='font-bold text-3xl  text-black text-center'>Our Top Selling</h1>
-   <div className='w-full grid grid-cols-4 py-3 rounded-3xl bg-gray-50 gap-x-4 gap-y-5 sm:grid-cols-2 sm:gap-x-2'>
-      {topproduct?.map((a)=>(
-        <Link className='no-underline' to="/productdetail">
+ {/*<Link className='no-underline' to="/productdetail">
        <div onClick={()=>dispatch(productdetailcontain(a))} className={`h-[280px] text-black place-items-center group
         relative rounded-3xl text-center bg-white ${hover}`} key={a.id}>
         <img className='w-full h-[50%] rounded-t-3xl' src={a.image}/>
@@ -32,7 +22,20 @@ function Topselling() {
          group-hover:block sm:block md:block bottom-1 right-2 '><FaCartShopping/>
          </div>
         </div>
-        </Link>
+        </Link>*/}
+function Topselling() {
+  const dispatch=useDispatch()
+  
+         
+      
+  return (
+<>
+ <div className='w-full mt-[50px]'>
+  <h1 className='font-bold text-3xl  text-black text-center'>Our Top Selling</h1>
+   <div className='w-full grid grid-cols-4 py-3 rounded-3xl bg-gray-50 gap-x-4 gap-y-5 sm:grid-cols-2 sm:gap-x-2'>
+      {topproduct?.map((a)=>(
+        <Card product={a} key={a.id}/>
+      
          ))}
     </div>
   </div>

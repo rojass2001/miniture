@@ -1,14 +1,14 @@
 {
   "name": "miniture",
-  "homepage":"https://rojass2001.githhub.io/Furniture",
+  "homepage": "https://rojass2001.githhub.io/Furniture",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -23,6 +23,7 @@
     "react-icons": "^5.4.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.1",
+    "react-spinners": "^0.15.0",
     "swiper": "^11.2.0"
   },
   "devDependencies": {

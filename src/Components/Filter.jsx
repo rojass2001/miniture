@@ -9,17 +9,15 @@ function Filter() {
  const [data,setdata]=useState(30)
   const navigate=useNavigate()
   const dispatch=useDispatch()
-  const price=(event)=>{
-    setdata(event.target.value)
-    console.log(data)
-  dispatch(pricefilter(event.target.value))
-  navigate('/filter')
-  }
- const handle=(event)=>{
-  console.log(event.target.value)
-  dispatch(productfilter(event.target.value)) 
-  navigate('/filter')
-}   
+     const price=(event)=>{
+      setdata(event.target.value)
+      dispatch(pricefilter(event.target.value))
+      navigate('/filter')
+      }
+      const handle=(event)=>{
+        dispatch(productfilter(event.target.value)) 
+        navigate('/filter')
+      }   
   return (
     <div className='w-[20%] py-3 bg-white shadow-md pl-2 h-screen shadow-gray-300 sm:w-[40%]'>
          <p className='text-4xl font-bold text-black sm:text-xl'>Filter By   Price</p>
@@ -29,7 +27,7 @@ function Filter() {
           </div>
           <div className='flex justify-between'>
          <input className='accent-slate-950 w-[150px] sm:w-[80px]'   type="range" min={30} max={300} step={1} 
-          value={data}  onChange={price}/>
+            value={data} onChange={price}/>
           <p>${data}</p>
           </div>
         <p className='text-2xl font-bold text-black sm:text-xl'>By Category</p>

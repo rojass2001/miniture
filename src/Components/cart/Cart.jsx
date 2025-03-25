@@ -15,7 +15,6 @@ function Cart() {
     <div className='w-full relative gap-2 flex mt-3 sm:flex-col-reverse sm:p-2'>
     <Cartcontain/>
     <Carttotal/>
-    
     </div>
     }
     </>

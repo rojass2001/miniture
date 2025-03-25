@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 import Sliders from './Sliders'
 import Hero from './Hero'
 
