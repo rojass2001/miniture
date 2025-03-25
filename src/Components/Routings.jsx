@@ -26,7 +26,7 @@ function Routings() {
       
       
     <Route path='/' element={<Home/>}/> 
-    <Route path='/Furniture' element={<Home/>}/> 
+    <Route path='/miniture' element={<Home/>}/> 
     <Route path='/shop' element={<Shop/>}/> 
     <Route path='/contact' element={<Contactpage/>}/> 
     <Route path='/about' element={<Aboutpage/>}/> 
