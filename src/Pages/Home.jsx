@@ -1,9 +1,11 @@
 import { lazy, Suspense } from 'react'
 import Banner from '../Components/home/Banner'
-import Categories from '../Components/home/Categories'
-import Kitchen from '../Components/home/Kitchen'
-import Topselling from '../Components/home/Topselling'
+const Categories=lazy(()=>import('../Components/home/Categories'))
+const Kitchen =lazy(()=>import('../Components/home/Kitchen'))
+const Topselling=lazy(()=>import( '../Components/home/Topselling'))
 import Service from '../Components/home/Service/Service'
+import Loader from '../Loader'
+
 
 
 
@@ -13,7 +15,7 @@ function Home() {
     <>
     
     <div className='w-full mt-[80px] px-12 sm:px-1 md:px-5 '>
-    <Suspense fallback={<p>hfhfhfhfh</p>}>
+    <Suspense fallback={<Loader/>}>
      <Banner/>
     <Categories/>
     <Kitchen/>

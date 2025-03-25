@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Routings from './Components/Routings';
@@ -7,8 +7,7 @@ function App() {
 
   return (
     <>
-      <div className='w-full'>
-        
+      <div className='w-full'> 
     <Routings/>
        </div>
     </>
