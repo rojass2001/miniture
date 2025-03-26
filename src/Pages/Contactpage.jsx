@@ -4,7 +4,7 @@ import Contact from '../Components/Contact'
 function Contactpage() {
   return (
     <>
-   <Contact/>
+    <Contact/>
     </>
   )
 }

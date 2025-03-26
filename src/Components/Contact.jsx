@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Pageheading from './Pageheading'
 import Contactform from './Contactform'
 
@@ -6,9 +5,8 @@ function Contact() {
   
   return (
     <>
-    <Pageheading head="Contact"/>
-   <Contactform/>
-
+      <Pageheading head="Contact"/>
+      <Contactform/>
     </>
   )
 }

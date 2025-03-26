@@ -3,8 +3,8 @@ import Searchbar from './Searchbar'
 import Card from './Card'
 function Filterdatas() {
     const{filterproducts}=useSelector(state=>state.product)
-  return (
-    <div className='w-full'>
+ return (
+  <div className='w-full'>
        <Searchbar/>
       {filterproducts.length<1?
       <div className='w-full h-screen text-5xl place-content-start text-center'>No Search Found</div>
@@ -14,7 +14,7 @@ function Filterdatas() {
               ))}
       </div>
         }
-</div>       
+  </div>       
   )
 }
 
