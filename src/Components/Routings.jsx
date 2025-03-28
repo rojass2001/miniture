@@ -4,7 +4,7 @@ import Home from '../Pages/Home'
 import Navbar from "./navbar/Navbar"
 const Shop=lazy(()=>import('../Pages/Shop'))
 const Contactpage=lazy(()=>import('../Pages/Contactpage'))
-import Footer from './Footer'
+const Footer=lazy(()=>import('./Footer'))
 const Filterpage=lazy(()=>import('../Pages/Filterpage'))
 const  Cartpage=lazy(()=>import('../Pages/Cartpage'))
 const Aboutpage=lazy(()=>import('./Aboutpage'))
