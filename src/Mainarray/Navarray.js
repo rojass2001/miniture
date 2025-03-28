@@ -17,5 +17,9 @@ export const navarray=[
         links:"/about",
         delay:0.9
     },
+    {   name:"Signout",
+        links:"/login",
+        delay:0.9
+    }
 ]
 export default navarray
