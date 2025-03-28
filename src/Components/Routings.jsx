@@ -9,39 +9,33 @@ const Filterpage=lazy(()=>import('../Pages/Filterpage'))
 const  Cartpage=lazy(()=>import('../Pages/Cartpage'))
 const Aboutpage=lazy(()=>import('./Aboutpage'))
 const Productdetail=lazy(()=>import('./Productdetail'))
-import Login from "../Pages/Loginorregister/Login"
-import Register from "../pages/Loginorregister/Register"
+import Login from "../Pages/Login"
+import Register from "../pages/Register"
 import Loader from '../Loader'
-
-
 
 function Routings() {
   return (
     <>
-    <Router>
-    
+  <Router>
     <Navbar/> 
     <Suspense fallback={<Loader/>}>
-    <Routes>
+        <Routes>
+          <Route path='/' element={<Home/>}/> 
+          <Route path='/miniture' element={<Home/>}/> 
+          <Route path='/shop' element={<Shop/>}/> 
+          <Route path='/contact' element={<Contactpage/>}/> 
+          <Route path='/about' element={<Aboutpage/>}/> 
+          <Route path='/filter' element={<Filterpage/>}/> 
+          <Route path='/cart' element={<Cartpage/>}/> 
+          <Route path='/productdetail' element={<Productdetail/>}/> 
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>       
+        </Routes> 
+      </Suspense>
+      <Footer/>
       
-      
-    <Route path='/' element={<Home/>}/> 
-    <Route path='/miniture' element={<Home/>}/> 
-    <Route path='/shop' element={<Shop/>}/> 
-    <Route path='/contact' element={<Contactpage/>}/> 
-    <Route path='/about' element={<Aboutpage/>}/> 
-    <Route path='/filter' element={<Filterpage/>}/> 
-    <Route path='/cart' element={<Cartpage/>}/> 
-    <Route path='/productdetail' element={<Productdetail/>}/> 
-    <Route path='/login' element={<Login/>}/>
-    <Route path='/register' element={<Register/>}/>
-    
-    </Routes> 
-    </Suspense>
-    <Footer/>
-    
 
-    </Router>  
+  </Router>  
     </>
   )
 }
