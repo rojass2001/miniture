@@ -22,7 +22,7 @@ function Login() {
     <div className={inputcontainer} > 
        <FaLock /> <input className='outline-none w-full h-12 pl-2  bg-gray-100' placeholder='enter password' type="password"/>
     </div>
-        <button type="sumit" className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
+        <button type="submit" className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
       <span className='w-full flex gap-2 items-center place-content-center'>
         <button className={`${button} bg-orange-400`}>Signin</button>
         <Link to="/register"> <button className={button}>Signup</button></Link> 
