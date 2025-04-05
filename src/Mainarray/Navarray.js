@@ -3,19 +3,19 @@ import { delay } from "framer-motion"
 export const navarray=[
     {   name:"Home",
         links:"/",
-        delay:0.2,
+        delay:0.1,
     },
     {   name:"Shop",
         links:"/shop",
-        delay:0.5
+        delay:0.3
     },
     {   name:"Contact",
         links:"/contact",
-        delay:0.8
+        delay:0.5
     },
     {   name:"About",
         links:"/about",
-        delay:0.9
+        delay:0.7
     },
     {   name:"Signout",
         links:"/login",

@@ -6,7 +6,7 @@ const gettouch=["Sign Up For Our newsletter and receive 10% off your"]
 function Footer() {
   return (
     <>
-<div className='w-full mt-3 bg-blue-950 px-4 grid grid-cols-4 gap-3 sm:grid-cols-2 sm:px-1'> 
+<footer className='w-full mt-3 bg-blue-950 px-4 grid grid-cols-4 gap-3 sm:grid-cols-2 sm:px-1'> 
   <div className='h-[250px] text-white font-bold'>
     <p className='text-2xl '>Our  store</p>
     {ourstore.map((a)=>(
@@ -31,7 +31,7 @@ function Footer() {
         <><p key={d}>{d}</p></>
         ))}
   </div>
-</div>
+</footer>
     </>
   )
 }

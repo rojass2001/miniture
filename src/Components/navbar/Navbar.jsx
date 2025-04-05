@@ -1,5 +1,5 @@
 
-import Mobilenav from './Mobilenav';
+import Mobilenav from './Mobiledrawer';
 import Desktopnav from './Desktopnav';
 import Navbaricons from './Navbaricons';
 import { motion } from 'framer-motion';
@@ -11,7 +11,7 @@ function Navbar() {
   }
   return (
    <>
-  <motion.div
+  <motion.nav
     initial={{opacity:0,y:-100}}
     animate={{opacity:1,y:0}}
     transition={{duration:0.4,delay:0.6}}
@@ -19,11 +19,10 @@ function Navbar() {
      items-center justify-around sm:justify-between ">
       <h2 className='text-3xl font-black  mt-1  '>Miniture</h2>
       <Desktopnav/>
-      {open&&
-        <Mobilenav openandclose={openandclose}/>
-      }
+     
+          <Mobilenav openandclose={openandclose} open={open} />
       <Navbaricons openandclose={openandclose}/> 
-  </motion.div>
+  </motion.nav>
   
 </>
   )

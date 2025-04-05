@@ -1,12 +1,11 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import { FaBars } from 'react-icons/fa6'
 import { HiOutlineHeart, HiOutlineUser } from 'react-icons/hi'
 import { MdOutlineShoppingBag } from 'react-icons/md'
-import { useDispatch, useSelector } from 'react-redux'
+import {  useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 function Navbaricons({openandclose}) {
   const{cartproducts}=useSelector(state=>state.cart)
- const dispatch=useDispatch()
   return (
     <>
        <div className='flex  text-2xl items-center mb-1 gap-3 sm:gap-0 '>

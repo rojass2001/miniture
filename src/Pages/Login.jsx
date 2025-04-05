@@ -13,16 +13,16 @@ function Login() {
     flex-col space-y-6 shadow-md bg-white rounded-3xl shadow-gray-300'>
       <h1 className='font-bold'>Sign in</h1>
      <div className={inputcontainer} > 
-      <FaUser /> <input className='outline-none w-full text-black pl-2 h-12 bg-gray-100'
+      <FaUser /> <input required className='outline-none w-full text-black pl-2 h-12 bg-gray-100'
        placeholder='enter name' type="text"/>
     </div>
     <div className={inputcontainer} > 
-       <MdEmail /> <input className='outline-none w-full h-12 pl-2  bg-gray-100' placeholder='enter email' type="email"/>
+       <MdEmail /> <input required className='outline-none w-full h-12 pl-2  bg-gray-100' placeholder='enter email' type="email"/>
     </div>
     <div className={inputcontainer} > 
        <FaLock /> <input className='outline-none w-full h-12 pl-2  bg-gray-100' placeholder='enter password' type="password"/>
     </div>
-        <button className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
+        <button type="sumit" className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
       <span className='w-full flex gap-2 items-center place-content-center'>
         <button className={`${button} bg-orange-400`}>Signin</button>
         <Link to="/register"> <button className={button}>signup</button></Link> 
