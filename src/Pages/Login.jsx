@@ -25,7 +25,7 @@ function Login() {
         <button type="sumit" className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
       <span className='w-full flex gap-2 items-center place-content-center'>
         <button className={`${button} bg-orange-400`}>Signin</button>
-        <Link to="/register"> <button className={button}>signup</button></Link> 
+        <Link to="/register"> <button className={button}>Signup</button></Link> 
        </span>  
     </form>
   </div> 

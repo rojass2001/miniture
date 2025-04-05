@@ -25,7 +25,7 @@ function Register() {
       </div>
       <button type="submit"className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Register</button>
        <span className='w-full flex gap-2 items-center place-content-center'>
-          <Link to="/login"> <button className={button}>signin</button></Link> 
+          <Link to="/login"> <button className={button}>Signin</button></Link> 
           <button className={`${button} bg-orange-400`}>Signup</button>
         </span>
     </form>
