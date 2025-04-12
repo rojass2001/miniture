@@ -12,6 +12,7 @@ const Productdetail=lazy(()=>import('./Productdetail'))
 import Login from "../Pages/Login"
 import Register from "../pages/Register"
 import Loader from '../Loader'
+import Forgetpasssword from '../Pages/Forgetpasssword'
 
 function Routings() {
   return (
@@ -29,7 +30,8 @@ function Routings() {
           <Route path='/cart' element={<Cartpage/>}/> 
           <Route path='/productdetail' element={<Productdetail/>}/> 
           <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>       
+          <Route path='/register' element={<Register />} />   
+          <Route path='/forget' element={<Forgetpasssword/>}/>  
         </Routes> 
       </Suspense>
       <Footer/>

@@ -2,7 +2,14 @@
 import navarray from '../../Mainarray/Navarray';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-function Mobiledrawer({openandclose,open}) {
+import { useDispatch } from 'react-redux';
+import { setlogout } from '../../redux/loginslice';
+function Mobiledrawer({ openandclose, open }) {
+  const dispatch=useDispatch()
+  const signout = async() => {
+    await openandclose()
+    dispatch(setlogout())
+  }
   return (
     
         <AnimatePresence mode="wait">
@@ -17,13 +24,16 @@ function Mobiledrawer({openandclose,open}) {
                        top-0 left-0 z-20 h-screen  py-[120px] '>
             {navarray.map((b, index) => (
               <Link className='no-underline' to={b.links} key={index}>
-                <motion.p
+                <motion.li
                   initial={{ opacity: 0, x: -200 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: b.delay, }}
-                  onClick={() => openandclose()} className='text-center text-black  mb-4 text-2xl font-bold '>{b.name}</motion.p>
+                  onClick={() => openandclose()} className='text-center list-none text-black  mb-4 text-2xl font-bold '>{b.name}</motion.li>
               </Link>
             ))}
+          <Link to="/login" className='no-underline' >
+            <motion.li onClick={signout}className='text-center list-none text-black   mb-4 text-2xl font-bold '>Signout</motion.li>
+          </Link>
           </motion.header>
         )}
           </AnimatePresence>
