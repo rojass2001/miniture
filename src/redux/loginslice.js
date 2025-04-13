@@ -1,25 +1,23 @@
 import { createSlice} from "@reduxjs/toolkit"
 import { toast } from "react-toastify";
+import Cookies from 'js-cookie';
+
 const INITIAL_STATE={
-    login:false
+    //login:false
    
 };
 const loginslice= createSlice({
     name: "login",
     initialState: INITIAL_STATE,
     reducers: {
-        setlogin: () => {
-            const login=JSON.parse(localStorage.getItem("login"))
-            if (login === false||null) {
-                localStorage.setItem("login",true)
-            }
-            
+        setlogin:async () => { 
+                  Cookies.set('login', JSON.stringify(true), { expires: 7 });
         },
-        setlogout: () => {
-            const login = JSON.parse(localStorage.getItem("login"))
+        setlogout: async() => {
+            const login=await JSON.parse(Cookies.get('login'))
             console.log(login)
             if (login===true) {
-                 localStorage.setItem("login",false)
+                 Cookies.set('login', JSON.stringify(false), { expires: 7 });
                toast.success("sucessfully logout")
             }
             else {

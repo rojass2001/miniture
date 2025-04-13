@@ -1,10 +1,9 @@
 
 import { Link } from 'react-router-dom'
 import { FaLock, } from 'react-icons/fa6'
-import { FaUser } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { useState } from 'react'
-import useAuth from '../Components/Firebase/firebaseauth'
+import useAuth from '../Backend/Firebase/firebaseauth'
 const button="w-[130px] py-2  rounded-full  text-black border-[1px] border-black font-bold"
 const inputcontainer="w-full px-2 flex items-center bg-gray-100"
 

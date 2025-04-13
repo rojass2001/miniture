@@ -2,7 +2,6 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword,sendPassword
 import { auth } from "./Firebase"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useState } from "react";
 import { setlogin } from "../../redux/loginslice";
 import { useDispatch } from "react-redux";
 

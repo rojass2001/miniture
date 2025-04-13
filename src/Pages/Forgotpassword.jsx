@@ -1,8 +1,8 @@
 import { useState } from "react"
-import useAuth from "../Components/Firebase/firebaseauth"
+import useAuth from "../Backend/Firebase/firebaseauth"
 import { MdEmail } from "react-icons/md"
 const inputcontainer="w-full px-2 flex items-center bg-gray-100"
-function Forgetpasssword() {
+function Forgotpassword() {
     const [email, setemail] = useState('')
     const {resetemail}=useAuth(email)
   return (
@@ -20,4 +20,4 @@ function Forgetpasssword() {
   )
 }
 
-export default Forgetpasssword
+export default Forgotpassword
