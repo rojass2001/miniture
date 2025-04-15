@@ -23,7 +23,7 @@ function Login() {
        <FaLock /> <input className='outline-none w-full h-12 pl-2  bg-gray-100' onChange={(e)=>setpassword(e.target.value)} placeholder='enter password' type="password"/>
       </div>
       <Link className='text-black mb-1' to="/forget">forget password?</Link>
-      <button onClick={loginsubmit} className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
+      <button  onClick={loginsubmit} className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
       <span className='w-full flex gap-2 items-center place-content-center'>
         <button className={`${button} bg-orange-400`}>Signin</button>
         <Link to="/register"> <button className={button}>Signup</button></Link> 

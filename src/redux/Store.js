@@ -10,8 +10,6 @@ export const Store=configureStore({
         product:productslice,
         cart: cartslice,
         login:loginslice
-      }
-    
-    
+      } 
 });
 export default Store

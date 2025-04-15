@@ -1,4 +1,4 @@
-
+import { toast } from "react-toastify";
 import { createSlice} from "@reduxjs/toolkit"
 const INITIAL_STATE={
     cartproducts:[] ,
@@ -15,7 +15,7 @@ const INITIAL_STATE={
          const newitem=action.payload;
          const itemindex=state.cartproducts.find((item)=>item.id===newitem.id);
   if (itemindex){
-    alert(itemindex.name+ "already exist in cart")
+    toast.error(itemindex.name + " already exist in cart")
   }
   else{
     state.cartproducts.push({
@@ -28,7 +28,7 @@ const INITIAL_STATE={
         subtotal:newitem.subtotal?newitem.subtotal:newitem.price
          
     })
-   alert(newitem.name+ " added successfully to cart")  
+   toast.success(newitem.name + " added successfully to cart")  
    state.totalprice+=newitem.subtotal?newitem.subtotal:newitem.price; 
   
 }
