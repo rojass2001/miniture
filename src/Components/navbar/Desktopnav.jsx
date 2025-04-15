@@ -2,9 +2,9 @@ import navarray from '../../Mainarray/Navarray'
 import { Link } from 'react-router-dom'
 import { setlogout } from '../../redux/loginslice'
 import { useDispatch } from 'react-redux'
- const hover="transform transition-all duration-300 hover:scale-110"
-function Desktopnav() {
+const hover = "transform transition-all duration-300 hover:scale-110"
  
+function Desktopnav() {
    const dispatch=useDispatch()
   return (
     <>

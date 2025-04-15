@@ -1,9 +1,9 @@
-
 import Mobilenav from './Mobiledrawer';
 import Desktopnav from './Desktopnav';
 import Navbaricons from './Navbaricons';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+
 function Navbar() {
   const[open,setopen]=useState(false)
   const openandclose=()=>{

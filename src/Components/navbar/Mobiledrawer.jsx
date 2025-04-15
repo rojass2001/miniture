@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { setlogout } from '../../redux/loginslice';
+
 function Mobiledrawer({ openandclose, open }) {
   const dispatch=useDispatch()
   const signout = async() => {
@@ -12,9 +13,9 @@ function Mobiledrawer({ openandclose, open }) {
   }
   return (
     
-        <AnimatePresence mode="wait">
-        {open && (
-          <motion.header
+    <AnimatePresence mode="wait">
+      {open && (
+        <motion.header
         
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -38,9 +39,9 @@ function Mobiledrawer({ openandclose, open }) {
                   transition={{ delay: 0.9 }}
               onClick={signout} className='text-center list-none text-black   mb-4 text-2xl font-bold '>Signout</motion.li>
           </Link>
-          </motion.header>
+       </motion.header>
         )}
-          </AnimatePresence>
+      </AnimatePresence>
     
   )
 }
