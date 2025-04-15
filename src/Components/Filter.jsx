@@ -4,7 +4,8 @@ import { productfilter } from '../redux/Productslice';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { pricefilter } from '../redux/Productslice';
-const filter=["new","old","plastic","wood","cusion","metal"]
+const filter = ["new", "old", "plastic", "wood", "cusion", "metal"]
+
 function Filter() {
  const [data,setdata]=useState(30)
   const navigate=useNavigate()

@@ -1,7 +1,8 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../redux/Cartslice'
-import {increase,decrease } from '../redux/Productslice'
+import { increase, decrease } from '../redux/Productslice'
+
 function Productdetail() {
   const {productdetails}=useSelector(state=>state.product)
  const dispatch=useDispatch()

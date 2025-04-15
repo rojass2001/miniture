@@ -1,6 +1,6 @@
-import React from 'react'
 
-function Pageheading({head}) {
+function Pageheading({ head }) {
+  
   return (
     <>
     <div className='w-full relative h-[300px] mt-[60px] sm:h-[200px]'>

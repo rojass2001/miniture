@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 import { addtocart } from '../redux/Cartslice'
 import { FaCartShopping, FaStar } from 'react-icons/fa6'
 import { HiOutlineHeart } from 'react-icons/hi'
- const hover="transform transition-all duration-300 hover:scale-105"
+const hover = "transform transition-all duration-300 hover:scale-105"
+ 
 function Card({product}) {
     const dispatch=useDispatch()
   return (

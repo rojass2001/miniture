@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import Searchbar from './Searchbar'
 import Card from './Card'
+
 function Filterdatas() {
     const{filterproducts}=useSelector(state=>state.product)
  return (
