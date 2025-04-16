@@ -1,9 +1,10 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 import './carttotal.css'
 import { Link } from 'react-router-dom'
+
 function Carttotal() {
-  const {cartproducts,totalprice}=useSelector((state)=>state.cart)
+  const { cartproducts, totalprice } = useSelector((state) => state.cart)
+  
   return (
     <>
   <div className='w-[20%] border-2 h-[215px] place-content-center space-y-3 mx-auto border-black p-2  rounded-3xl  bg-white sm:w-[80%]'>

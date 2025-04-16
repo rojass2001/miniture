@@ -1,8 +1,8 @@
-"use client"
-import React from 'react'
 import { services } from './Servicearray'
-const hover="transform transition-all duration-300 hover:scale-105"
+const hover = "transform transition-all duration-300 hover:scale-105"
+
 function Service() {
+  
   return (
     <>
     <div className='w-full text-center'>

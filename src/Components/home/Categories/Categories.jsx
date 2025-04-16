@@ -1,6 +1,6 @@
 
 import Categorygrid from './Categorygrid'
-const Livingroom="https://github.com/MdSamsadAli/miniture/blob/main/public/images/miniture/living_room.jpg?raw=true"
+  const Livingroom="https://github.com/MdSamsadAli/miniture/blob/main/public/images/miniture/living_room.jpg?raw=true"
   const Bedroom="https://github.com/MdSamsadAli/miniture/blob/main/public/images/miniture/bed_room.jpg?raw=true"
   const Kitchen="https://github.com/MdSamsadAli/miniture/blob/main/public/images/miniture/kids_room.jpg?raw=true"
   const kidsroom="//github.com/MdSamsadAli/miniture/blob/main/public/images/miniture/kitchen.jpg?raw=true"

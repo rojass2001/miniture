@@ -1,4 +1,4 @@
-import React from "react"
+
 import { FaShippingFast } from "react-icons/fa"
 import { FaHeadset, FaMoneyBillWave } from "react-icons/fa6"
 

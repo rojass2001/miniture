@@ -1,4 +1,3 @@
-import React from 'react'
 import Cartempty from './Cartempty'
 import { useSelector } from 'react-redux'
 import Pageheading from '../Pageheading'
@@ -6,7 +5,8 @@ import Cartcontain from './Cartcontain'
 import Carttotal from './Carttotal'
 
 function Cart() {
-    const{cartproducts}=useSelector(state=>state.cart)
+  const { cartproducts } = useSelector(state => state.cart)
+  
   return (
     <>
     <Pageheading head="Your cart"/>

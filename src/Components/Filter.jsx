@@ -18,7 +18,8 @@ function Filter() {
       const handle=(event)=>{
         dispatch(productfilter(event.target.value)) 
         navigate('/filter')
-      }   
+  } 
+  
   return (
     <div className='w-[20%] py-3 bg-white shadow-md pl-2 h-screen shadow-gray-300 sm:w-[40%]'>
          <p className='text-4xl font-bold text-black sm:text-xl'>Filter By   Price</p>

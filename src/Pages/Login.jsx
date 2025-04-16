@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom'
 import { FaLock,  } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 import { useState } from 'react'
-import useAuth from '../Backend/Firebase/firebaseauth'
+import useAuth from '../customhooks/useauth'
+import Form from '../Components/Form'
 const button="w-[130px] py-2  rounded-full  text-black border-[1px] border-black font-bold"
-const inputcontainer="w-full px-2 flex items-center bg-gray-100"
+const inputcontainer = "w-full px-2 flex items-center bg-gray-100"
+
 function Login() {
   const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
-    const{loginsubmit}=useAuth(email,password)
+  const { loginsubmit } = useAuth(email, password)
+  
   return (
     <>
-  <div className='w-full  h-screen flex px-2 items-center place-content-center'>
+  <Form className='w-full  h-screen flex px-2 items-center place-content-center'>
     <div className='md:w-[50%] lg:w-[26%] sm:w-full px-2  py-4 min-h-[300px] sm:h-auto flex items-center 
       flex-col space-y-3  shadow-md bg-white rounded-3xl shadow-gray-300'>
       <h1 className='font-bold'>Signin</h1>
@@ -20,7 +23,7 @@ function Login() {
         <MdEmail /> <input required className='outline-none w-full h-12 pl-2  bg-gray-100'onChange={(e)=>setemail(e.target.value)} placeholder='enter email' type="email"/>
       </div>
       <div className={inputcontainer} > 
-       <FaLock /> <input className='outline-none w-full h-12 pl-2  bg-gray-100' onChange={(e)=>setpassword(e.target.value)} placeholder='enter password' type="password"/>
+       <FaLock /> <input required className='outline-none w-full h-12 pl-2  bg-gray-100' onChange={(e)=>setpassword(e.target.value)} placeholder='enter password' type="password"/>
       </div>
       <Link className='text-black mb-1' to="/forget">forget password?</Link>
       <button  onClick={loginsubmit} className=' bg-gray-200 rounded-xl w-[50%]  py-2 font-bold'>Login</button>
@@ -29,7 +32,7 @@ function Login() {
         <Link to="/register"> <button className={button}>Signup</button></Link> 
        </span>  
     </div>
-  </div> 
+  </Form> 
     </>
   )
 }

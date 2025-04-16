@@ -1,8 +1,8 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword,sendPasswordResetEmail } from "firebase/auth";
-import { auth } from "./Firebase"
+import { auth } from "../Backend/Firebase/Firebase"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { setlogin } from "../../redux/loginslice";
+import { setlogin } from "../redux/loginslice";
 import { useDispatch } from "react-redux";
 
 export default function useAuth(email, password) {

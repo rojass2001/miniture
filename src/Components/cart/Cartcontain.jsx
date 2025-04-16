@@ -5,7 +5,8 @@ import { cartincrease,cartdecrease, removecart } from '../../redux/Cartslice'
 
 function Cartcontain() {
   const dispatch=useDispatch()
-  const {cartproducts,totalprice}=useSelector(state=>state.cart)
+  const { cartproducts} = useSelector(state => state.cart)
+  
   return (
     <>
     <div className='w-[75%]  mt-3 sm:w-full'>

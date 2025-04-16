@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import navarray from '../../Mainarray/Navarray';
+import navarray from './Navarray';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';

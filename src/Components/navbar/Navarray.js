@@ -1,4 +1,3 @@
-import { delay } from "framer-motion"
 
 export const navarray=[
     {   name:"Home",

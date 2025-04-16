@@ -1,4 +1,4 @@
-import navarray from '../../Mainarray/Navarray'
+import navarray from './Navarray'
 import { Link } from 'react-router-dom'
 import { setlogout } from '../../redux/loginslice'
 import { useDispatch } from 'react-redux'
