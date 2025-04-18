@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { setlogin } from "../redux/loginslice";
 import { useDispatch } from "react-redux";
-
+import Cookies from "js-cookie";
 export default function useAuth(email, password) {
     const dispatch=useDispatch()
     const navigate = useNavigate()
-     const handlesubmit = async () => {
+    const registersubmit = async (event) => {
+         event.preventDefault()
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Success! user created
@@ -26,7 +27,8 @@ export default function useAuth(email, password) {
     }
 
 
-    const loginsubmit = async () => {
+    const loginsubmit = async (event) => {
+        event.preventDefault()
         try {
             await signInWithEmailAndPassword(auth, email, password)
             toast.success("successfully login")
@@ -37,16 +39,26 @@ export default function useAuth(email, password) {
                        toast.error("invalid username or password")
                      }
     }
-    const resetemail = () => {
+    const resetemail = (event) => {
+    event.preventDefault()
     sendPasswordResetEmail(auth, email)
        .then(() => {
            toast.success("successfully send link to email please check your email")
         }).catch(() => {
             toast.error("please enter valid email")
        });
-   }
+    }
+    const cartauthentication = () => {
+        const login = JSON.parse(Cookies.get('login'))
+            console.log(login)
+            if (!login) {
+                navigate('/login')
+                toast.warning("please login")
+            }
+      
+    }
 
-    return{handlesubmit,loginsubmit,resetemail}
+    return{registersubmit,loginsubmit,resetemail,cartauthentication}
 }
 
 

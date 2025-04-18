@@ -13,7 +13,7 @@ function useFilter() {
       dispatch(pricefilter(event.target.value))
       navigate('/filter')
     }
-    const handlechange=(event)=>{
+  const handlechange = (event) => {
         dispatch(productfilter(event.target.value)) 
         navigate('/filter')
   } 

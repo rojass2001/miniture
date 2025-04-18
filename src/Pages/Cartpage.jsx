@@ -1,25 +1,15 @@
-
-import Cookies from 'js-cookie';
 import Cart from '../Components/cart/Cart'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import useAuth from '../customhooks/useauth';
+
 function Cartpage() {
-  //const { login } = useSelector(state => state.login)
-  const login =JSON.parse(Cookies.get('login'))
-  
-  const navigate=useNavigate()
-  useEffect(() => {
-    console.log(login)
-    if (login===false||null) {
-      toast.warning("please login")
-      navigate('/login')
-    }
-    
-  },[])
+    const{cartauthentication}=useAuth()
+    useEffect(() => {
+      cartauthentication()
+    }, [])
   return (
     <>
-    <Cart/>
+     <Cart/>
     </>
   )
 }
