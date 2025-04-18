@@ -1,7 +1,7 @@
-import { memo } from "react"
-
 /* eslint-disable react/prop-types */
- const hover="transform transition-all duration-300 hover:scale-105"
+import { memo } from "react"
+const hover="transform transition-all duration-300 hover:scale-105"
+
 function Categorygrid({catname,image,height,width}) {
   return (
     <>

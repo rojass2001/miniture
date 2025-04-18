@@ -4,14 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import Searchbar from '../Searchbar'
 import Card from '../Card'
 import { setproducts } from '../../redux/Productslice'
+
 function Allproduct() {
      const {allproduct}=useSelector((state)=>state.product)
-     const productfill=()=>{
-      dispatch(setproducts(allproducts))
-     }
      const dispatch=useDispatch()
       useEffect(()=>{
-        productfill()
+        dispatch(setproducts(allproducts))
       },[])
   return (
 <>

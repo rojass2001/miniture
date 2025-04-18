@@ -16,7 +16,7 @@ function Forgotpassword() {
         <div className={inputcontainer} > 
           <MdEmail /> <input required className='outline-none w-full h-12 pl-2  bg-gray-100'onChange={(e)=>setemail(e.target.value)} placeholder='enter email' type="email"/>
         </div>
-        <button className="p-2 bg-orange-400" onClick={resetemail}>Reset password</button>
+        <button type="button" className="p-2 bg-orange-400" onClick={resetemail}>Reset password</button>
      </div>
   </Form> 
     </>

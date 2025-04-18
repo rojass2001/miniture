@@ -14,15 +14,15 @@ const loginslice= createSlice({
                   Cookies.set('login', JSON.stringify(true), { expires: 7 });
         },
         setlogout: async() => {
-            const login=await JSON.parse(Cookies.get('login'))
-            console.log(login)
-            if (login===true) {
-                 Cookies.set('login', JSON.stringify(false), { expires: 7 });
-               toast.success("sucessfully logout")
-            }
-            else {
-                 toast.warning("please login first")
-            }
+        const login=await JSON.parse(Cookies.get('login'))
+        console.log(login)
+        if (login===true) {
+         Cookies.set('login', JSON.stringify(false), { expires: 7 });
+        toast.success("sucessfully logout")
+     }
+     else {
+        toast.warning("please login first")
+         }
             
         },
     }

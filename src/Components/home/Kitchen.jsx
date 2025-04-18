@@ -6,10 +6,10 @@ import { productdetailcontain} from '../../redux/Productslice'
 import { useDispatch } from 'react-redux'
 import { addtocart } from '../../redux/Cartslice'
 import { Link } from 'react-router-dom'
-  const carticons="absolute p-2  rounded-full bg-black  text-white hidden group-hover:block sm:block md:block";
-  const hover="transform transition-all duration-300 hover:scale-105"
+const carticons="absolute p-2  rounded-full bg-black  text-white hidden group-hover:block sm:block md:block";
+const hover = "transform transition-all duration-300 hover:scale-105"
+
 function Kitchen() {
-  
   const dispatch=useDispatch()
   return (
     <>

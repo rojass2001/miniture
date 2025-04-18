@@ -15,7 +15,6 @@ import Loader from '../Loader'
 import Forgotpassword from '../Pages/Forgotpassword'
 
 function Routings() {
-
   return (
     <>
   <Router>

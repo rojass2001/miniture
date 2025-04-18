@@ -5,9 +5,8 @@ import Hero from './Hero'
 function Banner() {
   return (
     <>
-    <Hero/>
-    <Sliders/>
-
+      <Hero/>
+      <Sliders/>
     </>
   )
 }
