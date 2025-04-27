@@ -48,8 +48,8 @@ export default function useAuth(email, password) {
             toast.error("please enter valid email")
        });
     }
-    const cartauthentication = () => {
-        const login = JSON.parse(Cookies.get('login'))
+    const cartauthentication = async() => {
+         const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login')) : null;
             console.log(login)
             if (!login) {
                 navigate('/login')
@@ -57,8 +57,18 @@ export default function useAuth(email, password) {
             }
       
     }
+        const logout =async () => {
+        const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login')) : null;
+            if (login === true) {
+            Cookies.set('login', JSON.stringify(false),{ expires: 7});
+                toast.success("sucessfully logout");
+            }
+            else {
+                toast.warning("please first login");
+                }
+        }
 
-    return{registersubmit,loginsubmit,resetemail,cartauthentication}
+    return{registersubmit,loginsubmit,resetemail,cartauthentication,logout}
 }
 
 

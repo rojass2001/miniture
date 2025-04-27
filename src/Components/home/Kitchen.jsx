@@ -29,7 +29,7 @@ function Kitchen() {
          </div>
        </div>
       </Link>
-     ))}
+  ))}
     </div>
   </div>
     </>

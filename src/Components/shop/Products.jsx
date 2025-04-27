@@ -5,7 +5,7 @@ function Products() {
  
   return (
   <>
-    <div className='w-full flex mt-[80px]'>
+    <div className='w-full flex py-3 mt-[80px]'>
       <Filter/>
       <Allproduct/>
     </div>

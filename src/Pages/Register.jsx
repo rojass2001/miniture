@@ -16,7 +16,6 @@ function Register() {
     <div className='md:w-[50%] lg:w-[26%] sm:w-full px-2 pb-4 min-h-[300px] sm:h-auto flex items-center 
       flex-col space-y-3 shadow-md bg-white rounded-3xl shadow-gray-300' >
         <h1 className='font-bold'>Sign Up</h1>
-    
       <div className={`mb-2 ${inputcontainer}`} > 
             <MdEmail /> <input required  className='outline-none w-full h-12 pl-2 bg-gray-100' onChange={(e)=>setemail(e.target.value)} placeholder='enter email' type="email"/>
       </div>
