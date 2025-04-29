@@ -12,7 +12,7 @@ function Categories() {
     <Box className='w-full flex gap-3 mt-5  px-2 sm:flex-col sm:h-auto  '>
         <Categorygrid catname="Living Room" image={Livingroom} width="w-1/3" height="h-[250px]"/>
         <Categorygrid catname="Bed Room" image={Bedroom} width="w-1/3" height="h-[250px]"/>
-      <Box className={`w-1/3  rounded-2xl ${hover}  h-[250px] sm:h-[480px] gap-3 flex flex-col sm:w-full  `}>
+      <Box className={`w-1/3  rounded-2xl ${hover}  h-[250px] sm:h-[480px] gap-3 flex flex-col sm:w-full`}>
         <Categorygrid catname="Kitchen" image={Kitchen}width="w-full" height="h-[45%]"/>
         <Categorygrid catname="Kids Room" image={kidsroom}width="w-full" height="h-[45%]"/>
       </Box>

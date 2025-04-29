@@ -8,7 +8,7 @@ function Desktopnav() {
     <nav className='desktopnav flex items-center list-none font-black text-[14px] space-x-5 sm:hidden '>    
         {navarray.map((a,i)=>(
         <Link className='no-underline' to={a.links} key={i}>
-        <li className={`text-[18px] text-black font-bold ${hover}`}>{a.name}</li>
+         <li className={`text-[18px] text-black font-bold ${hover}`}>{a.name}</li>
         </Link>
         ))} 
     </nav> 

@@ -18,7 +18,7 @@ function Service() {
           <Text>{a.des}</Text>
         </Box>
     </Box>
-   ))}
+    ))}
   </Box>
 </>
   )

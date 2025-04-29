@@ -13,11 +13,11 @@ function Hero() {
       </Box> 
         <Text className='text-4xl mb-2 font-bold '>Eleveate Your Lifestyle</Text>
     </Box>
-    <p className='text-4xl text-black font-bold '>With Our Furniture</p>
+    <Text className='text-4xl text-black font-bold '>With Our Furniture</Text>
      <Box className='flex gap-3 font-bold'>
         <Text className='text-4xl text-black  '>Creation</Text>
         <Link className='no-underline' to="/shop">
-        <div className=' bg-orange-400 flex items-center text-white text-center place-content-center w-[150px] h-10'>Shop Now</div>
+        <Box className=' bg-orange-400 flex items-center text-white text-center place-content-center w-[150px] h-10'>Shop Now</Box>
         </Link>
      </Box>
   </Box>
