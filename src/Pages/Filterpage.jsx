@@ -1,14 +1,13 @@
+import Box from '../Components/Box'
 import Filter from '../Components/Filter'
 import Filterdatas from '../Components/Filterdatas'
 
 function Filterpage() {
   return (
-   <>
-      <div className='w-full flex mt-[80px]'>
+      <Box className='w-full flex mt-[80px]'>
         <Filter/>
         <Filterdatas/>   
-      </div>
-  </>
+      </Box>
   )
 }
 

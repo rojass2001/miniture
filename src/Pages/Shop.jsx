@@ -1,11 +1,11 @@
+import Box from '../Components/Box'
 import Products from '../Components/shop/Products'
 
 function Shop() {
-
   return (
-   <>
-   <Products/>
-   </>
+   <Box>
+     <Products/>
+   </Box>
   )
 }
 

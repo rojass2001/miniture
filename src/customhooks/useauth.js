@@ -2,14 +2,11 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword,sendPassword
 import { auth } from "../Backend/Firebase/Firebase"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { setlogin } from "../redux/loginslice";
-import { useDispatch } from "react-redux";
 import Cookies from "js-cookie";
-export default function useAuth(email, password) {
-    const dispatch=useDispatch()
+export default function useAuthantication(email, password) {
     const navigate = useNavigate()
-    const registersubmit = async (event) => {
-         event.preventDefault()
+   const registersubmit = async (e) => {
+         e.preventDefault()
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Success! user created
@@ -27,48 +24,53 @@ export default function useAuth(email, password) {
     }
 
 
-    const loginsubmit = async (event) => {
-        event.preventDefault()
+    const loginsubmit = async (e) => {
+        e.preventDefault()
         try {
-            await signInWithEmailAndPassword(auth, email, password)
-            toast.success("successfully login")
-            dispatch(setlogin())
-            navigate('/shop')
+               await signInWithEmailAndPassword(auth, email, password);
+                Cookies.set('login', JSON.stringify(true), { expires: 7 });
+                toast.success("login successfully");
+                navigate('/shop')
      
             } catch {
-                       toast.error("invalid username or password")
+            toast.error("invalid username or password");
                      }
     }
-    const resetemail = (event) => {
-    event.preventDefault()
+    const resetemail = (e) => {
+        e.preventDefault()
     sendPasswordResetEmail(auth, email)
        .then(() => {
-           toast.success("successfully send link to email please check your email")
+           toast.success("successfully send link to email please check your email");
         }).catch(() => {
-            toast.error("please enter valid email")
+            toast.error("please enter valid email");
        });
     }
     const cartauthentication = async() => {
          const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login')) : null;
-            console.log(login)
             if (!login) {
-                navigate('/login')
-                toast.warning("please login")
-            }
+                toast.warning("please login");
+                navigate('/login')     
+        }
+            else {
+                navigate("/cart")
+             }
       
     }
-        const logout =async () => {
+    const logout =async () => {
         const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login')) : null;
             if (login === true) {
             Cookies.set('login', JSON.stringify(false),{ expires: 7});
                 toast.success("sucessfully logout");
             }
             else {
-                toast.warning("please first login");
+                toast.warning("please login first");
                 }
         }
-
-    return{registersubmit,loginsubmit,resetemail,cartauthentication,logout}
+    const contactsubmit = (e) => {
+         e.preventDefault()
+         toast.success("message submit sucessfully")
+     }
+    return{registersubmit,loginsubmit,resetemail,contactsubmit,cartauthentication,logout}
 }
 
 

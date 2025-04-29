@@ -1,10 +1,12 @@
-
-import Contact from '../Components/Contact'
+import Pageheading from '../Components/Pageheading'
+import Contactform from '../Components/Contactform'
 
 function Contactpage() {
+  
   return (
     <>
-    <Contact/>
+      <Pageheading head="Contact"/>
+      <Contactform/>
     </>
   )
 }

@@ -1,9 +1,12 @@
+import Box from "../Box"
+import Text from "../Text"
+
 function Cartempty() {
   return (
     <>
-      <div className='w-full pt-[40px] text-center justify-center h-screen'>
-        <h1 className='font-bold text-black'>Your cart Is Empty</h1>
-      </div>
+      <Box className='w-full pt-[40px] text-center justify-center h-screen'>
+        <Text className='font-bold text-4xl text-black'>Your cart is Empty</Text>
+      </Box>
     </>
   )
 }

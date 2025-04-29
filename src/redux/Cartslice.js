@@ -12,7 +12,7 @@ const INITIAL_STATE={
     reducers:{
    
  addtocart:(state,action)=>{
-         const newitem=action.payload;
+         const newitem= action.payload;
          const itemindex=state.cartproducts.find((item)=>item.id===newitem.id);
   if (itemindex){
     toast.error(itemindex.name + " already exist in cart")

@@ -2,17 +2,9 @@
 import navarray from './Navarray';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useDispatch } from 'react-redux';
-import { setlogout } from '../../redux/loginslice';
 
 function Mobiledrawer({ openandclose, open }) {
-  const dispatch=useDispatch()
-  const signout = async() => {
-    await openandclose()
-    dispatch(setlogout())
-  }
-  return (
-    
+  return ( 
     <AnimatePresence mode="wait">
       {open && (
         <motion.header
@@ -30,7 +22,7 @@ function Mobiledrawer({ openandclose, open }) {
                   onClick={() => openandclose()} className='text-center list-none text-black  mb-4 text-2xl font-bold '>{b.name}</motion.li>
               </Link>
             ))} 
-       </motion.header>
+        </motion.header>
         )}
     </AnimatePresence>
     
