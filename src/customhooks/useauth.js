@@ -4,17 +4,16 @@ import { useNavigate } from "react-router-dom"; // For navigating between pages
 import { toast } from "react-toastify"; // For showing notifications to the user
 import Cookies from "js-cookie"; // For handling cookies to manage user session
 
-export default function useAuthantication(email, password) {
+export default function useAuthentication(email, password) {
     const navigate = useNavigate(); // Hook to navigate to different pages
 
    // Register a new user
    const registersubmit = async (e) => {
          e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Success! user created
-                const user = userCredential.user;
-                toast.success("User created successfully", user.email);
+            .then(() => {
+                toast.success(`User created successfully ${email}`);
+                navigate('/login'); // Redirect to login page after successful registration
             }).catch((error) => {
                 // Handle errors during user creation
                 if (error.code === 'auth/email-already-in-use') {

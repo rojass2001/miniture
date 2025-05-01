@@ -42,7 +42,7 @@ function Navbaricons({ openandclose }) {
         
         {/* Logout button visible on hover */}
         <Link onClick={logout} to="/login">
-          <Button className='hidden group-hover:flex absolute top-[42px] gap-1 items-center place-content-center bg-white shadow-md text-black shadow-gray-300 rounded-lg right-[50px] sm:right-[0px] px-4 py-3 font-bold text-sm'>
+          <Button className='hidden group-hover:flex absolute top-[40px] gap-1 items-center place-content-center bg-white shadow-md text-black shadow-gray-300 rounded-lg right-[50px] sm:right-[0px] px-4 py-3 font-bold text-sm'>
             <IoSettingsOutline />Logout
           </Button>
         </Link>
