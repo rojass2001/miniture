@@ -66,8 +66,10 @@ export default function useAuthentication(email, password) {
             if (login === true) {
                 Cookies.set('login', JSON.stringify(false), { expires: 7 }); // Set login cookie to false on logout
                 toast.success("Successfully logged out.");
+                navigate('/login'); // Redirect to login page after logout
             } else {
                 toast.warning("Please log in first.");
+                navigate('/login'); // Redirect to login if not logged in
             }
     };
 
