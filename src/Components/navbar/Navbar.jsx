@@ -1,29 +1,31 @@
-import Mobilenav from './Mobiledrawer';
-import Desktopnav from './Desktopnav';
-import Navbaricons from './Navbaricons';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import Text from '../Text';
+import Mobilenav from './Mobiledrawer'; // Mobile navigation component
+import Desktopnav from './Desktopnav'; // Desktop navigation component
+import Navbaricons from './Navbaricons'; // Navbar icons (e.g., cart, profile)
+import { motion } from 'framer-motion'; // For animations
+import { useState } from 'react'; // For managing state
+import Text from '../Text'; // Text component for displaying the brand name
 
 function Navbar() {
-  const[open,setopen]=useState(false)
-  const openandclose=()=>{
-    setopen(!open)
-  }
+  const [open, setopen] = useState(false); // State for managing mobile drawer visibility
+  const openandclose = () => { // Function to toggle the mobile drawer
+    setopen(!open);
+  };
+
   return (
- <>
-  <motion.nav
-    initial={{opacity:0,y:-100}}
-    animate={{opacity:1,y:0}}
-    transition={{duration:0.4,delay:0.6}}
-    className="w-full fixed bg-white z-50 sm:px-2 top-0 right-0 left-0 shadow-md shadow-gray-500 h-[60px] flex items-center justify-around sm:justify-between ">
-      <Text className='text-3xl font-black  mt-1  '>Miniture</Text>
-      <Desktopnav/>
-      <Mobilenav openandclose={openandclose} open={open} />
-      <Navbaricons openandclose={openandclose}/> 
-  </motion.nav> 
- </>
-  )
+    <>
+      <motion.nav
+        initial={{ opacity: 0, y: -100 }} // Initial animation state: hidden and moved up
+        animate={{ opacity: 1, y: 0 }} // Animation state: visible and in place
+        transition={{ duration: 0.4, delay: 0.6 }} // Transition duration and delay
+        className="w-full fixed bg-white z-50 sm:px-2 top-0 right-0 left-0 shadow-md shadow-gray-500 h-[60px] flex items-center justify-around sm:justify-between"
+      >
+        <Text className='text-3xl font-black mt-1'>Miniture</Text> {/* Brand name */}
+        <Desktopnav /> {/* Desktop navigation links */}
+        <Mobilenav openandclose={openandclose} open={open} /> {/* Mobile navigation */}
+        <Navbaricons openandclose={openandclose} /> {/* Navbar icons (e.g., cart, profile) */}
+      </motion.nav>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;

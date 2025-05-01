@@ -12,13 +12,13 @@ export const services=[
    {
     icon:<FaHeadset className="text-4xl  "/>,
     title:"Support 24/7",
-     des:"We are higher assist you anytime",
+    des:"We are higher assist you anytime",
       
    },
    {
     icon:<FaMoneyBillWave className="text-4xl  "/>,
     title:"100% Money Back",
-     des:"Full refund if you are not intrested",
+    des:"Full refund if you are not intrested",
     
    },
 ]

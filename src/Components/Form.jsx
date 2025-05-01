@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 
-function Form({className,children,onsubmit}) {
+// Reusable Form component accepting styling, submit handler, and child elements
+function Form({ className, children, onsubmit }) {
   return (
-    <form className={className} onSubmit={onsubmit} >
+    // Render a <form> element with provided class and onSubmit function
+    <form className={className} onSubmit={onsubmit}>
+      {/* Render any nested components or elements inside the form */}
       {children}
     </form>
-  )
+  );
 }
 
-
-
-export default Form;
+export default Form; // Exporting the Form component for use elsewhere in the app
