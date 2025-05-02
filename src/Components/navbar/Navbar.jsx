@@ -7,10 +7,9 @@ import Text from '../Text'; // Text component for displaying the brand name
 
 function Navbar() {
   const [open, setopen] = useState(false); // State for managing mobile drawer visibility
-  const openandclose = () => { // Function to toggle the mobile drawer
-    setopen(!open);
-  };
-
+  const drawerpopup = () => {
+        setopen(!open)
+ }
   return (
     <>
       <motion.nav
@@ -21,8 +20,8 @@ function Navbar() {
       >
         <Text className='text-3xl font-black mt-1'>Miniture</Text> {/* Brand name */}
         <Desktopnav /> {/* Desktop navigation links */}
-        <Mobilenav openandclose={openandclose} open={open} /> {/* Mobile navigation */}
-        <Navbaricons openandclose={openandclose} /> {/* Navbar icons (e.g., cart, profile) */}
+        <Mobilenav drawerpopup={drawerpopup} open={open} /> {/* Mobile navigation */}
+        <Navbaricons drawerpopup={drawerpopup} /> {/* Navbar icons (e.g., cart, profile) */}
       </motion.nav>
     </>
   );

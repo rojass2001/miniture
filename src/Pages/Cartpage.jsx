@@ -9,7 +9,7 @@ function Cartpage() {
     // useEffect hook runs once after the initial render to authenticate the user for the cart page
     useEffect(() => {
       cartauthentication(); // Ensuring that the user is authenticated before viewing the cart
-    }, [cartauthentication]); // Empty dependency array means this effect runs only once when the component mounts
+    }, []); // Empty dependency array means this effect runs only once when the component mounts
 
   return (
     <>

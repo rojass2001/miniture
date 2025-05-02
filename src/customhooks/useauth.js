@@ -49,30 +49,28 @@ export default function useAuthentication(email, password) {
             });
     };
 
-   // Cart authentication (checks if user is logged in)
-    const cartauthentication = async () => {
-         const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login')) : null;
-            if (!login) {
-                toast.warning("Please log in.");
-                navigate('/login'); // Redirect to login if not logged in
-            } else {
-                navigate("/cart"); // Redirect to cart if logged in
-            }
-    };
+  const cartauthentication = async () => {
+    const login = Cookies.get('login') ? JSON.parse(Cookies.get('login')) : null
+    if (!login) {
+      toast.warning("Please log in")
+      navigate('/login')
+    } else {
+      navigate("/cart")
+    }
+  }
 
-   // Logout function
-    const logout = async () => {
-        const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login')) : null;
-            if (login === true) {
-                Cookies.set('login', JSON.stringify(false), { expires: 7 }); // Set login cookie to false on logout
-                toast.success("Successfully logged out.");
-                navigate('/login'); // Redirect to login page after logout
-            } else {
-                toast.warning("Please log in first.");
-                navigate('/login'); // Redirect to login if not logged in
-            }
-    };
-
+  // Log out the user and clear login cookies
+  const logout = async () => {
+    const login = Cookies.get('login') ? JSON.parse(Cookies.get('login')) : null
+    if (login === true) {
+      Cookies.set('login', JSON.stringify(false), { expires: 7 })
+      toast.success("Successfully logged out");
+      navigate('/login') // Redirect to login page after logout
+    } else {
+      toast.warning("Please log in first");
+      navigate('/login') // Redirect to login page if not logged in
+    }
+  }
    // Contact form submission function
     const contactsubmit = (e) => {
         e.preventDefault();

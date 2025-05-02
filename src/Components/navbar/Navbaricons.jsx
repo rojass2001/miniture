@@ -10,7 +10,7 @@ import Box from '../Box'; // Box component for layout
 import Button from '../Button'; // Button component
 
 // eslint-disable-next-line react/prop-types
-function Navbaricons({ openandclose }) {
+function Navbaricons({ drawerpopup }) {
   const { logout } = useAuth(); // Get logout function from custom hook
   const { cartproducts } = useSelector(state => state.cart); // Access cart state from Redux
 
@@ -35,17 +35,19 @@ function Navbaricons({ openandclose }) {
       </Box>
 
       {/* More options button */}
-      <Box className="group flex items-center place-content-center">
-        <PiDotsThreeOutlineVerticalFill className='group' />
-        {/* Mobile menu toggle icon (only visible on sm and larger screens) */}
-        <FaBars onClick={openandclose} className='hidden sm:block' size={35} />
+      <Box className=" flex items-center place-content-center">
+        <Box className="group">
+          <PiDotsThreeOutlineVerticalFill className='group' />
+          {/* Mobile menu toggle icon (only visible on sm and larger screens) */}
         
-        {/* Logout button visible on hover */}
         
-          <Button onClick={logout} className='hidden group-hover:flex absolute top-[40px] gap-1 items-center place-content-center bg-white shadow-md text-black shadow-gray-300 rounded-lg right-[50px] sm:right-[0px] px-4 py-3 font-bold text-sm'>
-            <IoSettingsOutline />Logout
-          </Button>
-        
+          {/* Logout button visible on hover */}
+          {/* Link to the login page, triggered on logout */}
+            <Button onClick={logout} className='hidden group-hover:flex absolute top-[40px] gap-1 items-center place-content-center bg-white shadow-md text-black shadow-gray-300 rounded-lg right-[50px] sm:right-[0px] px-4 py-3 font-bold text-sm'>
+              <IoSettingsOutline />Logout
+            </Button>
+        </Box>
+        <FaBars onClick={drawerpopup} className='hidden sm:block' size={35} />
       </Box>
     </Box> 
   );
