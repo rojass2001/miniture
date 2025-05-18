@@ -6,9 +6,9 @@ import 'react-toastify/dist/ReactToastify.css'; // Importing CSS for React Toast
 function App() {
   return (
     <>
-      <div className='w-full'> {/* Container div that takes up the full width of the page */}
+      <main className='w-full'> {/* main Container  that takes up the full width of the page */}
         <Routings /> {/* The Routings component handles the routing logic for the app */}
-      </div>
+      </main>
     </>
   );
 }
