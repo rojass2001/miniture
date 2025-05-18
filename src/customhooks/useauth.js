@@ -6,7 +6,7 @@ import Cookies from "js-cookie"; // For handling cookies to manage user session
 
 export default function useAuthentication(email, password) {
     const navigate = useNavigate(); // Hook to navigate to different pages
-
+    
    // Register a new user
    const registersubmit = async (e) => {
          e.preventDefault();
@@ -32,7 +32,7 @@ export default function useAuthentication(email, password) {
             await signInWithEmailAndPassword(auth, email, password);
             Cookies.set('login', JSON.stringify(true), { expires: 7 }); // Set login cookie to true for 7 days
             toast.success("Login successful");
-            navigate('/shop'); // Redirect to the shop page after successful login
+            navigate('/'); // Redirect to the shop page after successful login
         } catch {
             toast.error("Invalid username or password");
         }

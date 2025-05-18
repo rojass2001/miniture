@@ -22,7 +22,7 @@ function Allproduct() {
       <Searchbar />
 
       {/* Main container for displaying products in a grid */}
-      <Box className='w-full h-screen overflow-y-auto mt-12 px-12 mb-4 grid grid-cols-4 gap-5 sm:grid-cols-1 md:grid-cols-3 md:px-3 sm:px-1'>
+      <Box className='w-full h-screen overflow-y-auto mt-12 px-12 mb-4 grid grid-cols-4 gap-5 sm:grid-cols-1 md:grid-cols-2 md:px-3 sm:px-1'>
         {/* Looping over all products to display each product using the Card component */}
         {allproduct?.map((product) => (
           <Card product={product} key={product.id} /> // Passing each product as a prop to the Card component
